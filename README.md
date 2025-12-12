@@ -16,8 +16,8 @@ Instalación de CMS en arquitectura de 4 capas en alta disponibilidad.
    - 4.5. [Proxy de Base de Datos HAProxy](#44-proxy-de-base-de-datos)
    - 4.6. [Servidores de Base de Datos MariaDB Galera](#45-Servidor-de-Datos-1)
    - 4.6. [Servidores de Base de Datos MariaDB Galera](#45-Servidor-de-Datos-2)
-6. [Verificación del Sistema](#6-verificación-del-sistema)
-7. [Vídeo Demostrativo](#7-vídeo-demostrativo)
+5. [Verificación del Sistema](#5-Estructura-del-Proyecto)
+6. [Vídeo Demostrativo](#6-vídeo-demostrativo)
 
 ---
 
