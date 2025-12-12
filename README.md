@@ -5,6 +5,28 @@ Instalación de CMS en arquitectura de 4 capas en alta disponibilidad.
 
 ##  Índice
 
+Índice
+
+Introducción del Proyecto
+Arquitectura de la Infraestructura
+Direccionamiento IP Utilizado
+Scripts de Aprovisionamiento
+
+4.1. Balanceador de Carga Nginx
+4.2. Servidor Web 1
+4.3. Servidor Web 2
+4.4. Servidor NFS con PHP-FPM
+4.5. Proxy de Base de Datos HAProxy
+4.6. Servidor de Base de Datos 1
+4.7. Servidor de Base de Datos 2
+
+
+Estructura del Proyecto
+Verificación del Sistema
+
+
+
+
 1. [Introducción del Proyecto](#1-introducción-del-proyecto)
 2. [Arquitectura de la Infraestructura](#2-arquitectura-de-la-infraestructura)
 3. [Direccionamiento IP Utilizado](#3-direccionamiento-ip-utilizado)
