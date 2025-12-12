@@ -1,9 +1,9 @@
 # CMS_LAMP_4capas
 Instalación de CMS en arquitectura de 4 capas en alta disponibilidad.
 
-# 📘 Documentación Técnica - Infraestructura LEMP en Alta Disponibilidad
+#  Documentación Técnica - Infraestructura LEMP en Alta Disponibilidad
 
-## 📑 Índice
+##  Índice
 
 1. [Introducción del Proyecto](#1-introducción-del-proyecto)
 2. [Arquitectura de la Infraestructura](#2-arquitectura-de-la-infraestructura)
@@ -228,7 +228,7 @@ Port Forwarding: puerto 80 mapeado al puerto 8080 del host
 # Script de Aprovisionamiento
 balanceador.sh
 ---
-
+```bash
 #!/bin/bash
 
 # Script de aprovisionamiento del Balanceador de Carga Nginx
@@ -273,7 +273,7 @@ echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
 sysctl -p
 
 echo "=== Balanceador configurado correctamente ==="
-
+```
 ---
 
 
@@ -295,7 +295,7 @@ NFS Client: cliente para montar sistemas de archivos remotos
 Script de Aprovisionamiento
 web1.sh
 ---
-
+```
 #!/bin/bash
 
 # Script de aprovisionamiento del Servidor Web 1
@@ -349,7 +349,7 @@ systemctl enable nginx
 systemctl restart nginx
 
 echo "=== Servidor Web 1 configurado correctamente ==="
-
+```
 ---
 
 ### 4.3. Servidor Web 2
@@ -369,7 +369,7 @@ Script de Aprovisionamiento
 web2.sh
 
 ---
-
+```
 #!/bin/bash
 
 # Script de aprovisionamiento del Servidor Web 2
@@ -423,7 +423,7 @@ systemctl enable nginx
 systemctl restart nginx
 
 echo "=== Servidor Web 2 configurado correctamente ==="
-
+```
 ---
 
 ### 4.4. Servidor NFS
@@ -445,7 +445,7 @@ Script de Aprovisionamiento:
 nfs.sh
 
 ---
-
+```
 #!/bin/bash
 
 # Script de aprovisionamiento del Servidor NFS con PHP-FPM
@@ -516,7 +516,7 @@ netstat -tlnp | grep 9000 || ss -tlnp | grep 9000
 echo "=== Servidor NFS con PHP-FPM configurado correctamente ==="
 echo "PHP-FPM escuchando en: 0.0.0.0:9000"
 echo "NFS compartiendo: /var/www/html"
-
+```
 ---
 
 ### 4.5. Proxy de Base de Datos
@@ -536,7 +536,7 @@ Script de Aprovisionamiento
 proxy.sh
 
 ---
-
+```
 #!/bin/bash
 
 # Script de aprovisionamiento del Proxy de Base de Datos HAProxy
@@ -594,7 +594,7 @@ systemctl restart haproxy
 
 echo "=== Proxy de base de datos configurado correctamente ==="
 echo "=== Estadísticas disponibles en http://192.168.20.10:8080/stats (admin/admin) ==="
-
+```
 ---
 
 ### 4.6. Servidor de Datos 1
@@ -615,7 +615,7 @@ Script de Aprovisionamiento
 db1.sh
 
 ---
-
+```
 #!/bin/bash
 
 # Script de aprovisionamiento del Servidor de Base de Datos 1
@@ -716,7 +716,7 @@ mysql cms_lamp_db -e "SHOW TABLES;" || true
 echo "=== Servidor de base de datos 1 (Galera Nodo 1) configurado correctamente ==="
 echo "=== Estado del cluster: ==="
 mysql -e "SHOW STATUS LIKE 'wsrep_%';" | grep -E "wsrep_cluster_size|wsrep_cluster_status|wsrep_ready|wsrep_connected" || true
-
+```
 ---
 
 ### 4.7. Servidor de Datos 2
@@ -739,7 +739,7 @@ db2.sh
 
 ---
 
-
+```
 #!/bin/bash
 
 # Script de aprovisionamiento del Servidor de Base de Datos 2
@@ -814,7 +814,7 @@ systemctl enable mariadb
 echo "=== Servidor de base de datos 2 (Galera Nodo 2) configurado correctamente ==="
 echo "=== Estado del cluster: ==="
 mysql -e "SHOW STATUS LIKE 'wsrep_%';" 2>/dev/null | grep -E "wsrep_cluster_size|wsrep_cluster_status|wsrep_ready|wsrep_connected" || echo "Nodo uniéndose al cluster..."
-
+```
 ---
 
 ## 5. Estructura del Proyecto
