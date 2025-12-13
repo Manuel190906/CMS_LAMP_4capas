@@ -877,3 +877,7 @@ Todas las máquinas deben estar en estado `running`.
 ## 6. Verificación del Sistema
 
 ### 6.1. Verificación de Conectividad entre Máquinas
+<a href="www.Drive.com" target="_blank">
+  <img src="https://drive.google.com/file/d/1WEOrJ2Cb0ox7-GAp7eYNu-jcAdxOHMFq/view?usp=drive_link" alt="Verificación" />
+</a>
+
